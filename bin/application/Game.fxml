@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Game">
+   <top>
+      <AnchorPane prefHeight="65.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="322.0" layoutY="7.0" prefHeight="40.0" prefWidth="255.0" text="Wellcome to X O">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff8800" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="winner" alignment="CENTER" layoutX="251.0" layoutY="61.0" prefHeight="55.0" prefWidth="393.0" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#00ff09" />
+                        <Stop color="#ffd600" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="sound" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#muteFromIo" style="-fx-background-color: lightblue;" text="Sound On">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="1.0">
+                     <input>
+                        <SepiaTone />
+                     </input>
+                  </Bloom>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="766.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="topLeft" layoutX="265.0" layoutY="37.0" mnemonicParsing="false" onAction="#pressTopLeft" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="topMid" layoutX="390.0" layoutY="37.0" mnemonicParsing="false" onAction="#pressTopMid" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="topRight" layoutX="516.0" layoutY="37.0" mnemonicParsing="false" onAction="#pressTopRight" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="midLeft" layoutX="265.0" layoutY="146.0" mnemonicParsing="false" onAction="#pressMidLeft" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="midMid" layoutX="390.0" layoutY="146.0" mnemonicParsing="false" onAction="#pressMidMid" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="midRight" layoutX="516.0" layoutY="146.0" mnemonicParsing="false" onAction="#pressMidRight" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="bottomLeft" layoutX="264.0" layoutY="255.0" mnemonicParsing="false" onAction="#pressBottomLeft" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="bottomMid" layoutX="389.0" layoutY="255.0" mnemonicParsing="false" onAction="#pressBottomMid" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="bottomRight" layoutX="516.0" layoutY="255.0" mnemonicParsing="false" onAction="#pressBottomRight" prefHeight="102.0" prefWidth="119.0" visible="false">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Button>
+            <Button fx:id="reset" layoutX="306.0" layoutY="400.0" mnemonicParsing="false" onAction="#restart" prefHeight="26.0" prefWidth="287.0" style="-fx-background-color: orange;" text="Start">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Button>
+            <Label fx:id="turn" alignment="CENTER" layoutX="307.0" layoutY="368.0" prefHeight="22.0" prefWidth="284.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="O" layoutX="90.0" layoutY="130.0" prefWidth="116.0" text="O" textFill="#d6a51a" visible="false">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Label>
+            <Label fx:id="X" layoutX="728.0" layoutY="130.0" prefWidth="116.0" text="X" textFill="#38d718" visible="false">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
